@@ -324,25 +324,9 @@ EC_votes_dhondt['Popular_Vote'] = df1[0].values
 for index, row in EC_votes_dhondt.iterrows():
         if row.EC_Percentage != 'EC_Percentage':
             EC_votes_dhondt.at[index,'Discrepancy'] = -(round((row.Popular_Vote - row.EC_Percentage),2))
-# EC_votes_dhondt = EC_votes_dhondt.round(1)
-EC_votes_dhondt.to_csv("EC_results_dhondt.csv")   
-# #%%
-#     if count == 0:
-#         EC_indices = list(sums.index.values.tolist())
-#         # columns = EC_colnames, 
-#         EC_votes_dhondt = pd.DataFrame(index = EC_indices)  
-#         EC_votes_dhondt = EC_votes_dhondt.merge(sums, left_index = True, 
-#                                                 right_index = True, how='inner')
-#         df_length = len(EC_votes_dhondt)
-#         count += 1
-#         EC_votes_dhondt = EC_votes_dhondt.reset_index()
-#     else:
-#         sums = sums.reset_index()
-#         df_length = len(sums)-1
-#         # sums.at[df_length,'index'] = 5
-#         EC_votes_dhondt = EC_votes_dhondt.merge(sums, on = 'index',  how='outer')
-#         # year_df['ECvotes']= year_df['state'].map(EC_votes_1970s)
-#         # EC_votes_dhondt = EC_votes_dhondt.append(sums, sort=False)
+
+EC_votes_
+.to_csv("EC_results_dhondt.csv")   
 
 
     
